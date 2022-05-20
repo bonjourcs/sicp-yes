@@ -6,3 +6,8 @@
                      (cond((and(> x y)(not(> x z)))(s x))
                           ((and(> y z)(not(> y x)))(s y))
                           ((and(> z x)(not(> z y)))(s z)))))
+;another smart solution
+(define (sum-of-square x y) (+ (s x) (s y)))
+(define (bigger x y) (if (> x y) x y))
+(define (smaller x y) (if (> x y) y x))
+(define (solution x y z)(sum-of-square (bigger (bigger x y) z) (smaller (bigger x y) z)))
