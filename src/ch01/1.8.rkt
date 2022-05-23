@@ -7,3 +7,6 @@
   (if (good-enough? guess x)
       guess
       (cube-root (better guess x) x)))
+;真正的求立方根
+(define (real-cube-root x)
+  (cube-root 1 x))
